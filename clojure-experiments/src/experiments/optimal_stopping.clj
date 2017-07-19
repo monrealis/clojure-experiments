@@ -2,9 +2,9 @@
 
 (defn generate-random [n]
   (let [range (range n)]
-      (shuffle range)
+    (shuffle range)
     )
-)
+  )
 
 (def n 10)
 
