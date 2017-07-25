@@ -8,17 +8,26 @@
 
 (def n 10)
 
-(def input (generate-random n))
+(let [input (generate-random n)]
+  (let [m (Math/ceil (* n 0.37))] 
+    (let [head (take m input) tail (subvec input m)]
+      (let [best-in-last (apply max tail)]
+        (let [found-best (= best-in-last 9)]
+          (println found-best)
+          )
+        )
+      )
+    )
+  )
 
-(def m (Math/ceil (* n 0.37)))
 
 
-(def head (take m input))
-(def tail (subvec input m))
 
-(def best-in-last (apply max tail))
 
-(def found-best (= best-in-last 9))
 
-(println found-best)
+
+
+
+
+
 
