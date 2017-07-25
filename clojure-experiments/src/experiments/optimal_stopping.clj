@@ -16,17 +16,9 @@
 (def head (take m input))
 (def tail (subvec input m))
 
-(def best (apply max (take m head)))
+(def best-in-last (apply max tail))
 
-(println input)
-(println "best in first" best)
-(println "first" head)
-(println "last" tail)
+(def found-best (= best-in-last 9))
 
-(println (or (first (filter #(> % best) tail)) (last tail)))
-
-
-
-
-
+(println found-best)
 
